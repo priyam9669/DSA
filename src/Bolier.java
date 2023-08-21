@@ -1,20 +1,27 @@
 public class Bolier {
     public static void main(String[] Arg){
         System.out.println("Hellow");
-
+        ListNode[] arry= new ListNode()[]{1,2,3,4,5};
+        reverseList(arry,2,4);
     }
 
 
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList(ListNode head, int left, int right) {
         ListNode tempnext;
         ListNode prev=null;
         ListNode current= head;
+        int i=0;
         while( current!=null){
             tempnext= current.next;
-            current.next=prev;
+            if(right<=i && i<=left){
+                current.next=prev;
+            }
+            
             prev=current;
             current=tempnext;
+            i++;
         }
+        
         return prev;
     }
 
@@ -29,7 +36,7 @@ public class Bolier {
       ListNode next;
       ListNode() {}
       ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
   }
 
 
