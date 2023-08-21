@@ -1,8 +1,29 @@
+import org.w3c.dom.Node;
+
 public class Bolier {
     public static void main(String[] Arg){
         System.out.println("Hellow");
         ListNode[] arry= new ListNode()[]{1,2,3,4,5};
         reverseList(arry,2,4);
+    }
+
+
+    public ListNode create_linkList(int[] array){
+        
+        ListNode list=null;
+        int i=0;
+        while( i<array.length){
+            Node new_node= new Node(array[i]);
+            if(list==null){
+                
+                list=new_node;
+            }else{
+
+            }
+            i++;
+        }
+        return null;
+
     }
 
 
@@ -32,7 +53,8 @@ public class Bolier {
 
  // Definition for singly-linked list.
   class ListNode {
-      int val;
+      public Node head;
+        int val;
       ListNode next;
       ListNode() {}
       ListNode(int val) { this.val = val; }
